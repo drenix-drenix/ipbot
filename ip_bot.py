@@ -6,7 +6,7 @@ bot = Bot(token=token)
 dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def start(message):
-    await message.reply('Привет, я - бот, который может узнать подробную информацию о любом IP адресе.\nОтправь мне IP адрес мне и получишь информацию о нем!!\n')
+    await message.reply('Привет, я - бот, который может узнать подробную информацию о любом IP адресе.\nОтправь мне IP адрес и получишь информацию о нем!\n')
 @dp.message_handler(content_types=['text'])
 async def text(message):
     if message.chat.type != "private":
